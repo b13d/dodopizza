@@ -1,0 +1,274 @@
+{
+  "frequentlyOrdered": [
+    {
+      "id": 1,
+      "name": "Бруслетики",
+      "price": 225,
+      "oldPrice": 0,
+      "images": ["/images/frequentlyOrdered/product-1.png"]
+    },
+    {
+      "id": 2,
+      "name": "Пепперони фреш",
+      "price": 289,
+      "oldPrice": 0,
+      "images": ["/images/frequentlyOrdered/product-2.png"]
+    },
+    {
+      "id": 3,
+      "name": "3 пиццы",
+      "price": 1099,
+      "oldPrice": 1527,
+      "images": ["/images/frequentlyOrdered/product-3.png"]
+    },
+    {
+      "id": 4,
+      "name": "Додстер",
+      "price": 189,
+      "oldPrice": 0,
+      "images": ["/images/frequentlyOrdered/product-4.png"]
+    },
+    {
+      "id": 5,
+      "name": "Комбо от 599 ₽",
+      "price": 599,
+      "oldPrice": 742,
+      "images": ["/images/frequentlyOrdered/product-5.png"]
+    }
+  ],
+  "Products": {
+    "breakfast": [
+      {
+        "id": 1,
+        "title": "Омлет с ветчиной и грибами",
+        "description": "Горячий сытный омлет с поджаристой корочкой, ветчина, шампиньоны и моцарелла",
+        "price": 179,
+        "images": ["/images/breakfast/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Омлет с пепперони в пите",
+        "description": "Для тех, кто не пропускает завтраки — омлет с поджаристой корочкой, пикантная пепперони, томаты и моцарелла в пшеничной пите. Удобно взять с собой",
+        "price": 199,
+        "images": ["/images/breakfast/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Омлет сырный",
+        "description": "Горячий завтрак из омлета с поджаристой корочкой, моцарелла, кубики брынзы, сыры чеддер и пармезан",
+        "price": 179,
+        "images": ["/images/breakfast/product-3.png"]
+      }
+    ],
+    "pizza": [
+      {
+        "id": 1,
+        "title": "Пицца Миксик",
+        "description": "Пицца четвертинками с ветчиной, цыпленком, томатами, брынзой, моцареллой и фирменным соусом альфредо",
+        "price": 369,
+        "images": ["/images/pizza/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Сырная",
+        "description": "Моцарелла, сыры чеддер и пармезан, фирменный соус альфредо",
+        "price": 369,
+        "images": ["/images/pizza/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Пепперони фреш",
+        "description": "Пикантная пепперони, увеличенная порция моцареллы, томаты, фирменный томатный соус",
+        "price": 289,
+        "images": ["/images/pizza/product-3.png"]
+      }
+    ],
+    "combo": [
+      {
+        "id": 1,
+        "title": "Путешествие к звездам",
+        "description": "Добро пожаловать на Звездный Экспресс! Закажите комбо с пиццей 30 см на выбор и прохлаждающим напитком и получите электронный промокод в игре Honkai Star Rail!",
+        "price": 749,
+        "oldPrice": 999,
+        "images": ["/images/combo/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Комбо Завтрак на двоих",
+        "description": "Горячий завтрак для двоих. 2 любые закуски и 2 напитка на выбор",
+        "price": 549,
+        "oldPrice": 676,
+        "images": ["/images/combo/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Комбо от 599 ₽",
+        "description": "Если хочется всего понемногу. Маленькая пицца, закуска, напиток и соус. Цена комбо зависит от выбранных продуктов и может быть увеличена",
+        "price": 599,
+        "oldPrice": 742,
+        "images": ["/images/combo/product-3.png"]
+      }
+    ],
+    "appetizers": [
+      {
+        "id": 1,
+        "title": "Дэнвич ветчина и сыр",
+        "description": "Поджаристая чиабатта и знакомое сочетание ветчины, цыпленка, моцареллы со свежими томатами, соусом ранч и чесноком",
+        "price": 249,
+        "images": ["/images/appetizers/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Дэнвич чоризо барбекю",
+        "description": "Насыщенный вкус острых колбасок чоризо и пикантной пепперони с соусами бургер и барбекю, свежими томатами, маринованными огурчиками, моцареллой и луком в румяной чиабатте",
+        "price": 249,
+        "images": ["/images/appetizers/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Картофель из печи с соусом",
+        "description": "Запеченная в печи картошечка с пряными специями. В комплекте сырный соус",
+        "price": 270,
+        "images": ["/images/appetizers/product-3.png"]
+      }
+    ],
+    "cocktails": [
+      {
+        "id": 1,
+        "title": "Банановый молочный коктейль",
+        "description": "По-настоящему солнечный! Молочный коктейль с добавлением бананового пюре",
+        "price": 215,
+        "images": ["/images/cocktails/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Карамельное яблоко молочный коктейль",
+        "description": "Уютное сочетание яблочного вкуса, теплой карамели, молока и мороженого в вашем стакане",
+        "price": 215,
+        "images": ["/images/cocktails/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Шоколадный молочный коктейль",
+        "description": "Очаровательная шоколадная нежность. Попробуйте молочный коктейль с какао и мороженым",
+        "price": 199,
+        "images": ["/images/cocktails/product-3.png"]
+      }
+    ],
+    "coffee": [
+      {
+        "id": 1,
+        "title": "Ирландский Капучино",
+        "description": "Классический кофейный напиток с яркой историей и вкусом сливочного безалкогольного ликера «Айриш крим»",
+        "price": 159,
+        "images": ["/images/coffee/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Кофе Карамельный капучино",
+        "description": "Если не шоколад, то карамель! А капучино с карамельным сиропом особенно хорош",
+        "price": 159,
+        "images": ["/images/coffee/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Кофе Ореховый латте",
+        "description": "Много молока и фундука. Уютный латте на основе эспрессо и орехового сиропа",
+        "price": 159,
+        "images": ["/images/coffee/product-3.png"]
+      }
+    ],
+    "beverages": [
+      {
+        "id": 1,
+        "title": "Какао",
+        "description": "Отправляемся в сладкое плавание в хорошей компании — горячий какао с молоком",
+        "price": 119,
+        "images": ["/images/beverages/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Добрый Кола",
+        "description": "",
+        "price": 119,
+        "images": ["/images/beverages/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Добрый Кола без сахара",
+        "description": "",
+        "price": 119,
+        "images": ["/images/beverages/product-3.png"]
+      }
+    ],
+    "desserts": [
+      {
+        "id": 1,
+        "title": "Слоеные палочки с соусом манго и ананасами",
+        "description": "Это что-то на тропическом! Ананас и манговый соус на воздушном слоеном тесте",
+        "price": 269,
+        "images": ["/images/desserts/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Слоеные палочки с ананасами и брусникой",
+        "description": "Здесь все сразу — брусника и ананас со сгущенкой на слоеном тесте",
+        "price": 249,
+        "images": ["/images/desserts/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Чизкейк Нью-Йорк",
+        "description": "Мы перепробовали тысячу десертов и наконец нашли любимца гостей — нежнейший творожный чизкейк",
+        "price": 159,
+        "images": ["/images/desserts/product-3.png"]
+      }
+    ],
+    "sauces": [
+      {
+        "id": 1,
+        "title": "Сырный соус",
+        "description": "Фирменный соус со вкусом расплавленного сыра для бортиков пиццы и горячих закусок, 25 г",
+        "price": 45,
+        "images": ["/images/sauces/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Чесночный соус",
+        "description": "Фирменный соус с чесночным вкусом для бортиков пиццы и горячих закусок, 25 г",
+        "price": 45,
+        "images": ["/images/sauces/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Барбекю",
+        "description": "Фирменный соус с дымным ароматом для бортиков пиццы и горячих закусок, 25 г",
+        "price": 45,
+        "images": ["/images/sauces/product-3.png"]
+      }
+    ],
+    "otherDoods": [
+      {
+        "id": 1,
+        "title": "Кофе в зернах - фирменная смесь",
+        "description": "Фирменная смесь кофейных зерен из 100% арабики. Кофейные зерна из Бразилии и Эфиопии обжаренные по специальному рецепту Додо. Идеально подходят для заваривания в домашних условиях",
+        "price": 955,
+        "images": ["/images/otherDoods/product-1.png"]
+      },
+      {
+        "id": 2,
+        "title": "Подарочный сертификат",
+        "description": "Сертификат на любую большую пиццу. Действует на доставку, самовывоз и в ресторане",
+        "price": 1149,
+        "images": ["/images/otherDoods/product-2.png"]
+      },
+      {
+        "id": 3,
+        "title": "Додо Раскраска",
+        "description": "Чтобы обед был не только сытным, но и веселым",
+        "price": 10,
+        "images": ["/images/otherDoods/product-3.png"]
+      }
+    ]
+  }
+}
