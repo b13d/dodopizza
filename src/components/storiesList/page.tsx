@@ -26,14 +26,15 @@ export default function StoriesList() {
           <div className="flex justify-between">
             <section
               style={{ translate: `${moveTo}px` }}
-              className={`w-[1280px] m-auto flex pt-3 relative gap-3 flex-nowrap duration-150 ease-linear`}
+              className={` m-auto flex pt-3 relative gap-3 flex-nowrap duration-300 ease-in-out`}
             >
-              <ListItem />
-              <ListItem />
-              <ListItem />
-              <ListItem />
-              <ListItem />
-              <ListItem />
+              <ListItem storiesID={1} />
+              <ListItem storiesID={2} />
+              <ListItem storiesID={3} />
+              <ListItem storiesID={4} />
+              <ListItem storiesID={5} />
+              <ListItem storiesID={6} />
+              <ListItem storiesID={1} />
             </section>
           </div>
         </div>

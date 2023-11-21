@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.name__block {
+  transition: 300ms;
+}
+
+.name__block:hover {
+  color: rgb(249, 115, 22);
+}

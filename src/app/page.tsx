@@ -6,6 +6,7 @@ import StoriesList from "@/components/storiesList/page";
 import Orders from "@/components/orders/page";
 import Products from "@/components/products/page";
 import GetData from "@/components/getData/page";
+import Footer from "@/components/footer/page";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Orders />
         <Products />
       </Container>
+      <Footer />
     </main>
   );
 }

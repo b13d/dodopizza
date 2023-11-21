@@ -6,37 +6,37 @@ export default function Nav() {
     <nav className="w-[1280px] m-auto flex justify-between items-center">
       <ul className="flex gap-4">
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Завтрак</li>
+          <li className="font-semibold text-sm name__block">Завтрак</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Пицца</li>
+          <li className="font-semibold text-sm name__block">Пицца</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Комбо</li>
+          <li className="font-semibold text-sm name__block">Комбо</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Закуски</li>
+          <li className="font-semibold text-sm name__block">Закуски</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Коктейли</li>
+          <li className="font-semibold text-sm name__block">Коктейли</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Кофе</li>
+          <li className="font-semibold text-sm name__block">Кофе</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Десерты</li>
+          <li className="font-semibold text-sm name__block">Десерты</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Напитки</li>
+          <li className="font-semibold text-sm name__block">Напитки</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Соусы</li>
+          <li className="font-semibold text-sm name__block">Соусы</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Другие товары</li>
+          <li className="font-semibold text-sm name__block">Другие товары</li>
         </Link>
         <Link href={`/`}>
-          <li className="font-semibold text-sm">Акции</li>
+          <li className="font-semibold text-sm name__block">Акции</li>
         </Link>
       </ul>
 
