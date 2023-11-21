@@ -35,9 +35,6 @@ export default function Nav() {
         <Link href={`/`}>
           <li className="font-semibold text-sm name__block">Другие товары</li>
         </Link>
-        <Link href={`/`}>
-          <li className="font-semibold text-sm name__block">Акции</li>
-        </Link>
       </ul>
 
       <button className="bg-orange-500 rounded-3xl text-white py-2 px-3 hover:bg-orange-700 duration-150">

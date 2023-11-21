@@ -9,3 +9,33 @@
 .name__block:hover {
   color: rgb(249, 115, 22);
 }
+
+p {
+  font-weight: 500;
+}
+
+.title__delivery {
+  text-transform: uppercase;
+  color: rgb(255, 105, 0);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.list__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: rgb(180, 180, 180);
+}
+
+.list__footer li:nth-child(1) {
+  color: white;
+}
+
+.list__footer li {
+  width: fit-content;
+}
+
+.list__footer li:hover {
+  color: white;
+}

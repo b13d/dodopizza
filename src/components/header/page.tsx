@@ -23,7 +23,7 @@ export default function Header() {
           </Link>
         </ul>
       </section>
-      <hr className="opacity-50" />
+      <hr className="opacity-50 w-full" />
       <header className="w-[1280px] m-auto pt-[24px] pb-[16px] flex justify-between">
         <div className="flex gap-8">
           <img src="/Logo.png" alt="logo" />
