@@ -2,13 +2,17 @@
 
 import React, { useState } from "react";
 import { IProduct } from "../../../interfaces";
+import ModalWindow from "../modal/page";
 
 export default function Product(props: { product: IProduct }) {
   const [showModal, setShowModal] = useState(false);
 
   // return <h1 className="text-center">{props.num}</h1>;
   const handleClickShowModal = () => {
-    console.log("ShowModal");
+    if (!showModal) {
+      setShowModal(true);
+      console.log("ShowModal");
+    }
   };
 
   return (
@@ -17,6 +21,16 @@ export default function Product(props: { product: IProduct }) {
         onClick={handleClickShowModal}
         className="flex flex-col w-full gap-4 h-full justify-between cursor-pointer"
       >
+        {showModal && (
+          <ModalWindow
+            open={showModal}
+            title={props.product.title}
+            description={props.product.description}
+            src={props.product.images[0]}
+            setShowModal={setShowModal}
+            price={props.product.price.toString() + " ₽"}
+          />
+        )}
         <article>
           <img
             className="relative top-0 hover:translate-y-4 duration-150 ease-in"
@@ -27,7 +41,9 @@ export default function Product(props: { product: IProduct }) {
 
           <h1 className="font-medium text-[20px]">{props.product.title}</h1>
           <p className="text-[13px] text-gray-500">
-            {props.product.description}
+            {props.product.description.length > 120
+              ? props.product.description.slice(0, 120) + "..."
+              : props.product.description}
           </p>
         </article>
 

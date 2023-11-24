@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useContext } from "react";
 
 export default function Header() {
   return (

@@ -18,11 +18,6 @@ export default async function Orders() {
           {data.map((order) => {
             return <OrderItem key={order.id} order={order} />;
           })}
-          {/* 
-        <OrderItem />
-        <OrderItem />
-        <OrderItem />
-        <OrderItem /> */}
         </div>
       </div>
     </section>
