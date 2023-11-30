@@ -1,5 +1,5 @@
+import { Typography } from "@mui/material";
 import React from "react";
-import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -16,68 +16,83 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col justify-between bg-[#111] pt-10">
-        <div className="w-[1280px] m-auto flex mb-20">
+        <div className="w-[1280px] m-auto flex mb-20 justify-between">
           <div className="w-[70%] grid grid-cols-4">
             <ul className="list__footer">
               <li>
-                <Link href={"/"}>Додо Пицца</Link>
+                <a href={"/"}>Додо Пицца</a>
               </li>
               <li>
-                <Link href={"/"}>О нас</Link>
+                <a href={"/"}>О нас</a>
               </li>
               <li>
-                <Link href={"/"}>Додо-книга</Link>
+                <a href={"/"}>Додо-книaга</a>
               </li>
               <li>
-                <Link href={"/"}>Блог "Сила ума"</Link>
+                <a href={"/"}>Блог "Сила ума"</a>
               </li>
               <li>
-                <Link href={"/"}>Додо ИС</Link>
-              </li>
-            </ul>
-            <ul className="list__footer">
-              <li>
-                <Link href={"/"}>Работа</Link>
-              </li>
-              <li>
-                <Link href={"/"}>В пиццерии</Link>
+                <a href={"/"}>Додо ИС</a>
               </li>
             </ul>
             <ul className="list__footer">
               <li>
-                <Link href={"/"}>Партнерам</Link>
+                <a href={"/"}>Работа</a>
               </li>
               <li>
-                <Link href={"/"}>Франшиза</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Инвестиции</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Поставщикам</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Предложить помещение</Link>
+                <a href={"/"}>В пиццерии</a>
               </li>
             </ul>
             <ul className="list__footer">
               <li>
-                <Link href={"/"}>Это интересно</Link>
+                <a href={"/"}>Партнерам</a>
               </li>
               <li>
-                <Link href={"/"}>Почему мы готовим без перчаток?</Link>
+                <a href={"/"}>Франшиза</a>
               </li>
               <li>
-                <Link href={"/"}>Экскурсии и мастер классы</Link>
+                <a href={"/"}>Инвестиции</a>
               </li>
               <li>
-                <Link href={"/"}>Корпоративные заказы</Link>
+                <a href={"/"}>Поставщикам</a>
+              </li>
+              <li>
+                <a href={"/"}>Предложить помещение</a>
+              </li>
+            </ul>
+            <ul className="list__footer">
+              <li>
+                <a href={"/"}>Это интересно</a>
+              </li>
+              <li>
+                <a href={"/"}>Почему мы готовим без перчаток?</a>
+              </li>
+              <li>
+                <a href={"/"}>Экскурсии и мастер классы</a>
+              </li>
+              <li>
+                <a href={"/"}>Корпоративные заказы</a>
               </li>
             </ul>
           </div>
 
-          <div className="w-[30%] text-white flex justify-end">
-            Ссылки на соц. сети
+          <div className=" text-white flex  flex-col items-center gap-4">
+            <Typography variant="h6">Мы еще есть тут:</Typography>
+            <img
+              src="/public/images/socials/app-gallery.png"
+              className="cursor-pointer w-[150px] h-[50px] rounded-lg"
+              alt="social"
+            />
+            <img
+              className="cursor-pointer w-[150px] h-[50px] rounded-lg"
+              src="/public/images/socials/apple-store.png"
+              alt="social"
+            />
+            <img
+              className="cursor-pointer w-[150px] h-[50px] rounded-lg"
+              src="/public/images/socials/google-play.png"
+              alt="social"
+            />
           </div>
         </div>
         <div className="flex gap-6 w-[1280px] m-auto">

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useContext } from "react";
 
 export default function Header() {
@@ -6,22 +5,22 @@ export default function Header() {
     <>
       <section className="py-4 m-auto h-[54px] w-[1280px] ">
         <ul className="flex gap-3 text-sm font-semibold">
-          <Link href={`/`}>
+          <a href={`/`}>
             {" "}
             <li>Прямой эфир</li>
-          </Link>
-          <Link href={`/`}>
+          </a>
+          <a href={`/`}>
             {" "}
             <li>Работа в Додо</li>
-          </Link>
-          <Link href={`/`}>
+          </a>
+          <a href={`/`}>
             {" "}
             <li>О нас</li>
-          </Link>
-          <Link href={`/`}>
+          </a>
+          <a href={`/`}>
             {" "}
             <li>Контакты</li>
-          </Link>
+          </a>
         </ul>
       </section>
       <hr className="opacity-50 w-full" />

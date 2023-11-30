@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import ListItem from "../listItem/page";
+import ListItem from "../listItem/listItem";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 export default function StoriesList() {

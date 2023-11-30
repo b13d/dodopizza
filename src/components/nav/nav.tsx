@@ -1,44 +1,50 @@
-import Link from "next/link";
 import React from "react";
+import { useAppSelector, useAppDispatch } from "../../hooks";
+import { increment, decrement } from "../../features/counter/counterSlice";
+import { Link } from "react-router-dom";
+import TemporaryDrawer from "../basket/basket";
 
 export default function Nav() {
+  const count = useAppSelector((state) => state.counter);
+  const dispatch = useAppDispatch();
+
   return (
     <nav className="w-[1280px] m-auto flex justify-between items-center">
       <ul className="flex gap-4">
-        <Link href={`/`}>
+        <a href={`/#breakfast`}>
           <li className="font-semibold text-sm name__block">Завтрак</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#pizza`}>
           <li className="font-semibold text-sm name__block">Пицца</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#combo`}>
           <li className="font-semibold text-sm name__block">Комбо</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#appetizers`}>
           <li className="font-semibold text-sm name__block">Закуски</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#cocktails`}>
           <li className="font-semibold text-sm name__block">Коктейли</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#coffee`}>
           <li className="font-semibold text-sm name__block">Кофе</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#beverages`}>
           <li className="font-semibold text-sm name__block">Десерты</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#desserts`}>
           <li className="font-semibold text-sm name__block">Напитки</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#sauces`}>
           <li className="font-semibold text-sm name__block">Соусы</li>
-        </Link>
-        <Link href={`/`}>
+        </a>
+        <a href={`/#other-products`}>
           <li className="font-semibold text-sm name__block">Другие товары</li>
-        </Link>
+        </a>
       </ul>
 
       <button className="bg-orange-500 rounded-3xl text-white py-2 px-3 hover:bg-orange-700 duration-150">
-        Корзина
+        {<TemporaryDrawer />}
       </button>
     </nav>
   );

@@ -2,6 +2,7 @@ export interface IFrequentlyOrdered {
   id: number;
   name: string;
   price: number;
+  description: string;
   oldPrice: number;
   images: string[];
 }
@@ -23,6 +24,7 @@ export interface IProducts {
 
 export interface IProduct {
   id: number;
+  idName: string;
   type: string;
   title: string;
   description: string;

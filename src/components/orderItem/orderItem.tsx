@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import ModalWindow from "../modal/page";
+import ModalWindow from "../modal/modal";
 
 import { IFrequentlyOrdered } from "../../../interfaces";
 
@@ -20,6 +20,7 @@ export default function OrderItem(props: { order: IFrequentlyOrdered }) {
           src={props.order.images[0]}
           setShowModal={setShowModal}
           price={props.order.price.toString() + " ₽"}
+          description={props.order.description}
         />
       )}
       <div
