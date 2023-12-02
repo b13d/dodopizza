@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import ModalWindow from "../modal/modal";
+import { IProduct } from "../../../interfaces";
 
-import { IFrequentlyOrdered } from "../../../interfaces";
-
-export default function OrderItem(props: { order: IFrequentlyOrdered }) {
+export default function OrderItem(props: { order: IProduct }) {
   const [showModal, setShowModal] = useState(false);
+  const [countBuy, setCountBuy] = useState(0);
 
   const handleOpen = () => {
     setShowModal(true);
@@ -15,12 +15,10 @@ export default function OrderItem(props: { order: IFrequentlyOrdered }) {
     <>
       {showModal && (
         <ModalWindow
+          product={props.order}
           open={showModal}
-          title={props.order.name}
-          src={props.order.images[0]}
           setShowModal={setShowModal}
-          price={props.order.price.toString() + " ₽"}
-          description={props.order.description}
+          setCountBuy={setCountBuy}
         />
       )}
       <div
@@ -30,7 +28,7 @@ export default function OrderItem(props: { order: IFrequentlyOrdered }) {
         <img width={80} src={props.order.images[0]} alt="icon" />
 
         <div>
-          <p>{props.order.name}</p>
+          <p>{props.order.title}</p>
           <p>{props.order.price} ₽</p>
           {props.order.oldPrice !== 0 && (
             <p>

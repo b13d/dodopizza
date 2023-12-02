@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { IFrequentlyOrdered, IProduct } from "../../../interfaces";
+import React, { useEffect, useState } from "react";
+import { IProduct } from "../../../interfaces";
 import ModalWindow from "../modal/modal";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { increment, decrement } from "../../features/counter/counterSlice";
@@ -13,8 +13,22 @@ export default function Product(props: { product: IProduct }) {
   const dispatch = useAppDispatch();
 
   const currentId = useAppSelector((state) => state.products.id);
+  const products = useAppSelector((state) => state.products);
 
-  // return <h1 className="text-center">{props.num}</h1>;
+  let temp = products.products.find(
+    (product) => product.title === props.product.title
+  );
+
+  console.log(temp);
+
+  useEffect(() => {
+    if (temp?.basketCount !== undefined) {
+      setCountBuy(temp?.basketCount);
+    } else {
+      setCountBuy(0);
+    }
+  }, [temp?.basketCount]);
+
   const handleClickShowModal = () => {
     if (!showModal) {
       setShowModal(true);
@@ -25,20 +39,24 @@ export default function Product(props: { product: IProduct }) {
   const handleClickBuy = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    const newProduct: IFrequentlyOrdered = {
+    console.log(products);
+
+    const newProduct: IProduct = {
       id: currentId,
       description: props.product.description,
       images: props.product.images,
-      name: props.product.title,
+      title: props.product.title,
       oldPrice: 0,
       price: Number(props.product.price),
+      idName: props.product.idName,
+      basketCount: props.product.basketCount,
+      type: props.product.type,
     };
 
     console.log(newProduct);
 
     dispatch(productAdd(newProduct));
 
-    setCountBuy((value) => value + 1);
     event.stopPropagation();
     dispatch(increment(props.product.price));
   };
@@ -46,7 +64,7 @@ export default function Product(props: { product: IProduct }) {
   const handleClickRemove = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    setCountBuy((value) => value - 1);
+    // setCountBuy((value) => value - 1);
     event.stopPropagation();
     dispatch(decrement(props.product.price));
   };
@@ -60,11 +78,8 @@ export default function Product(props: { product: IProduct }) {
         {showModal && (
           <ModalWindow
             open={showModal}
-            title={props.product.title}
-            description={props.product.description}
-            src={props.product.images[0]}
+            product={props.product}
             setShowModal={setShowModal}
-            price={props.product.price.toString() + " ₽"}
             setCountBuy={setCountBuy}
           />
         )}

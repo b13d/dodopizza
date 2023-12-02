@@ -1,12 +1,3 @@
-export interface IFrequentlyOrdered {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  oldPrice: number;
-  images: string[];
-}
-
 export interface IProducts {
   products: [
     breakfast: IProduct,
@@ -24,6 +15,7 @@ export interface IProducts {
 
 export interface IProduct {
   id: number;
+  basketCount?: number;
   idName: string;
   type: string;
   title: string;

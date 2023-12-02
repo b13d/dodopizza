@@ -8,7 +8,7 @@ import {
   productAdd,
   productDelete,
 } from "../../features/products/productsSlice";
-import { IFrequentlyOrdered } from "../../../interfaces";
+import { IProduct } from "../../../interfaces";
 
 const style = {
   position: "absolute",
@@ -23,12 +23,9 @@ const style = {
 };
 
 export default function ModalWindow(props: {
+  product: IProduct;
   open: boolean;
-  title: string;
-  description: string;
-  src: string;
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
-  price: string;
   setCountBuy: React.Dispatch<React.SetStateAction<number>>;
 }) {
   console.log(props.open);
@@ -44,19 +41,26 @@ export default function ModalWindow(props: {
     }, 700);
   };
   const currentId = useAppSelector((state) => state.products.id);
+  const products = useAppSelector((state) => state.products);
 
   const handleClickBuy = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    const image = [props.src];
+    const image = props.product.images;
 
-    const newProduct: IFrequentlyOrdered = {
+    console.log(products);
+
+    const newProduct: IProduct = {
       id: currentId,
-      description: props.description,
+      idName: props.product.idName,
+      description: props.product.description,
+      type: props.product.type,
+      basketCount: props.product.basketCount,
       images: image,
-      name: props.title,
+      title: props.product.title,
       oldPrice: 0,
-      price: Number(props.price),
+      // price: Number(props.product.price.split(" ")[0]),
+      price: props.product.price,
     };
 
     console.log(newProduct);
@@ -67,7 +71,8 @@ export default function ModalWindow(props: {
     event.stopPropagation();
 
     setOpen(false);
-    dispatch(increment(Number(props.price)));
+    // dispatch(increment(Number(props.price.split(" ")[0])));
+    dispatch(increment(props.product.price));
 
     setTimeout(() => {
       props.setShowModal(false);
@@ -90,7 +95,10 @@ export default function ModalWindow(props: {
         aria-describedby="modal-modal-description"
       >
         <Fade in={open}>
-          <Box width={props.description === undefined ? 400 : 600} sx={style}>
+          <Box
+            width={props.product.description === undefined ? 400 : 600}
+            sx={style}
+          >
             <section className={`flex gap-7`}>
               <div className="w-[70%] flex flex-col items-center">
                 <img
@@ -98,16 +106,16 @@ export default function ModalWindow(props: {
                   width={200}
                   height={200}
                   alt="eat"
-                  src={props.src}
+                  src={props.product.images[0]}
                 />
               </div>
 
               <div
                 className={`w-[100%] flex flex-col ${
-                  props.description ? "justify-between" : "justify-end"
+                  props.product.description ? "justify-between" : "justify-end"
                 }   items-end`}
               >
-                {props.description && (
+                {props.product.description && (
                   <>
                     <div>
                       <Typography
@@ -115,11 +123,11 @@ export default function ModalWindow(props: {
                         variant="h6"
                         component="h2"
                       >
-                        {props.title}
+                        {props.product.title}
                       </Typography>
                       <p className="text-gray-500 text-sm">1 шт</p>
                       <Typography id="modal-modal-description" variant="body2">
-                        {props.description}
+                        {props.product.description}
                       </Typography>
                     </div>
                   </>
@@ -135,7 +143,7 @@ export default function ModalWindow(props: {
                   }}
                   variant="contained"
                 >
-                  Добавить в корзину за {props.price}
+                  Добавить в корзину за {props.product.price}
                 </Button>
               </div>
             </section>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Product from "../product/product";
 import axios from "axios";
-import { IFrequentlyOrdered, IProduct, IProducts } from "../../../interfaces";
+import { IProduct, IProducts } from "../../../interfaces";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -18,7 +18,7 @@ export default function Products() {
 
   return (
     <section className="w-[1280px] m-auto">
-      {products.map((product) => {
+      {products.map((product: IProduct[]) => {
         return (
           <div id={product[0].idName} key={product[0].type}>
             <h1 className="text-3xl font-semibold my-4">{product[0].type}</h1>
@@ -30,20 +30,7 @@ export default function Products() {
             </div>
           </div>
         );
-        // console.log(product);
       })}
     </section>
   );
-}
-
-{
-  /* {arrPoducts.map((product) => {
-          return (
-            <h1 className="p-4 font-bold text-3xl">Название продуктов</h1>
-
-            <div className="grid grid-cols-4 gap-8">
-              <Product product={product} />
-            </div>
-          )
-        })} */
 }
