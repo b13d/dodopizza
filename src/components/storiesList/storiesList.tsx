@@ -21,8 +21,8 @@ export default function StoriesList() {
 
   return (
     <>
-      <div className="w-[1280px] m-auto relative">
-        <div className="w-[1280px] m-auto relative overflow-hidden">
+      <div className="max-lg:hidden max-w-[1280px] w-full  m-auto relative">
+        <div className="w-full m-auto relative max-w-[1280px] overflow-hidden">
           <div className="flex justify-between">
             <section
               style={{ translate: `${moveTo}px` }}
@@ -41,14 +41,14 @@ export default function StoriesList() {
         <div className="flex">
           <div
             onClick={handleClickRight}
-            className=" font-bold  text-orange-600  absolute top-[50%] right-[-5%] text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
+            className=" font-bold  text-orange-600  absolute top-[50%] right-[2%] text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
           >
             <MdOutlineArrowForwardIos />
           </div>
 
           <div
             onClick={handleClickLeft}
-            className=" font-bold  text-orange-600  absolute top-[50%] left-[-5%]  rotate-180 text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
+            className=" font-bold  text-orange-600  absolute top-[50%] left-[2%]  rotate-180 text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
           >
             <MdOutlineArrowForwardIos />
           </div>

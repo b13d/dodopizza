@@ -73,7 +73,7 @@ export default function Product(props: { product: IProduct }) {
     <>
       <div
         onClick={handleClickShowModal}
-        className="flex flex-col w-full gap-4 h-full justify-between cursor-pointer"
+        className="max-md:items-center flex flex-col w-full gap-4 h-full justify-between cursor-pointer"
       >
         {showModal && (
           <ModalWindow
@@ -85,7 +85,7 @@ export default function Product(props: { product: IProduct }) {
         )}
         <article>
           <img
-            className="relative top-0 hover:translate-y-4 duration-150 ease-in"
+            className="max-sm:w-[70%] max-sm:m-auto relative top-0 hover:translate-y-4 duration-150 ease-in"
             width={"100%"}
             src={`${props.product.images}`}
             alt="product"
@@ -99,7 +99,7 @@ export default function Product(props: { product: IProduct }) {
           </p>
         </article>
 
-        <div className="flex justify-between items-center">
+        <div className="max-md:flex-col max-md:items-center max-md:gap-4 flex justify-between items-center">
           <h1 className="text-lg font-semibold">{props.product.price} ₽</h1>
           {countBuy > 0 && (
             <div className="bg-gray-100 flex gap-2 items-center rounded-3xl">

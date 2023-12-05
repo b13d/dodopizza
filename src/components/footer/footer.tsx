@@ -5,19 +5,19 @@ export default function Footer() {
   return (
     <section className="w-full">
       <div className="bg-orange-600 py-4 flex">
-        <div className="w-[1280px] m-auto flex justify-between items-center">
-          <h1 className="text-lg text-white ">
+        <div className="px-4 max-w-[1280px] w-full m-auto flex justify-between items-center">
+          <h1 className="text-lg text-white max-md:text-sm">
             Стань тайным покупателем Додо Пиццы и получи пиццу в подарок
           </h1>
 
-          <button className="rounded-3xl bg-[white] px-3 py-2 text-orange-600 opacity-80 hover:opacity-100 duration-200">
+          <button className="max-md:text-sm rounded-3xl bg-[white] px-3 py-2 text-orange-600 opacity-80 hover:opacity-100 duration-200">
             Заполнить анкету
           </button>
         </div>
       </div>
       <div className="flex flex-col justify-between bg-[#111] pt-10">
-        <div className="w-[1280px] m-auto flex mb-20 justify-between">
-          <div className="w-[70%] grid grid-cols-4">
+        <div className="max-sm:flex-col max-sm:items-center max-w-[1280px] w-full m-auto flex mb-20 justify-between">
+          <div className="max-md:mb-4 max-md:grid-cols-2 max-md:w-full max-md:gap-4   w-[70%] grid grid-cols-4">
             <ul className="list__footer">
               <li>
                 <a href={"/"}>Додо Пицца</a>
@@ -95,7 +95,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="flex gap-6 w-[1280px] m-auto">
+        <div className="flex gap-6 max-w-[1280px] w-full m-auto max-md:px-4">
           <div className="max-w-xs">
             <h1 className="text-2xl text-white">4 525 387 608 ₽</h1>
             <p className="text-gray-500 text-sm">
@@ -111,7 +111,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-[1280px] m-auto pt-10">
+        <div className="w-full max-w-[1280px] m-auto pt-10">
           <hr className="border-gray-600 opacity-50" />
 
           <h1 className="text-gray-200 text-center py-5">

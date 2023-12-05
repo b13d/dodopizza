@@ -17,13 +17,15 @@ export default function Products() {
   }, []);
 
   return (
-    <section className="w-[1280px] m-auto">
+    <section className="max-w-[1280px] w-full m-auto">
       {products.map((product: IProduct[]) => {
         return (
           <div id={product[0].idName} key={product[0].type}>
-            <h1 className="text-3xl font-semibold my-4">{product[0].type}</h1>
+            <h1 className="px-4 text-3xl font-semibold my-4">
+              {product[0].type}
+            </h1>
 
-            <div className="grid items-start grid-cols-3 gap-20 mb-5">
+            <div className="p-4 max-sm:grid-cols-1 max-md:grid-cols-2 grid items-start grid-cols-3 gap-20 mb-5">
               <Product product={product[0]} />
               <Product product={product[1]} />
               <Product product={product[2]} />

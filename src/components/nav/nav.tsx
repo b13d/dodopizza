@@ -1,16 +1,16 @@
 import React from "react";
-import { useAppSelector, useAppDispatch } from "../../hooks";
-import { increment, decrement } from "../../features/counter/counterSlice";
-import { Link } from "react-router-dom";
-import TemporaryDrawer from "../basket/basket";
+// import { useAppSelector, useAppDispatch } from "../../hooks";
+// import { increment, decrement } from "../../features/counter/counterSlice";
+// import { Link } from "react-router-dom";
+// import TemporaryDrawer from "../basket/basket";
 
 export default function Nav() {
-  const count = useAppSelector((state) => state.counter);
-  const dispatch = useAppDispatch();
+  // const count = useAppSelector((state) => state.counter);
+  // const dispatch = useAppDispatch();
 
   return (
-    <nav className="w-[1280px] m-auto flex justify-between items-center">
-      <ul className="flex gap-4">
+    <nav className=" max-w-[1280px] w-full m-auto flex justify-between items-center">
+      <ul className="flex gap-4 max-lg:hidden">
         <a href={`/#breakfast`}>
           <li className="font-semibold text-sm name__block">Завтрак</li>
         </a>
@@ -42,10 +42,6 @@ export default function Nav() {
           <li className="font-semibold text-sm name__block">Другие товары</li>
         </a>
       </ul>
-
-      <button className="bg-orange-500 rounded-3xl text-white py-2 px-3 hover:bg-orange-700 duration-150">
-        {<TemporaryDrawer />}
-      </button>
     </nav>
   );
 }

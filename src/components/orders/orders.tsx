@@ -21,10 +21,10 @@ export default function Orders() {
   }, []);
 
   return (
-    <section className="m-auto w-full flex justify-center">
-      <div className="w-[1280px]">
-        <h1 className="my-4 text-2xl font-semibold">Часто заказывают</h1>
-        <div className="flex">
+    <section className="max-md: m-auto w-full flex justify-center">
+      <div className="max-w-[1280px] w-full">
+        <h1 className="px-4 my-4 text-2xl font-semibold">Часто заказывают</h1>
+        <div className="max-lg:flex-wrap max-lg:justify-center flex gap-2">
           {data.map((order) => {
             return <OrderItem key={order.id} order={order} />;
           })}
