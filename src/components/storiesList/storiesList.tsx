@@ -9,20 +9,20 @@ export default function StoriesList() {
 
   const handleClickRight = () => {
     if (moveTo > -292) {
-      setMoveTo((value) => value - 292);
+      setMoveTo((value) => value - 400);
     }
   };
 
   const handleClickLeft = () => {
     if (moveTo < 0) {
-      setMoveTo((value) => value + 292);
+      setMoveTo((value) => value + 400);
     }
   };
 
   return (
     <>
       <div className="max-lg:hidden max-w-[1280px] w-full  m-auto relative">
-        <div className="w-full m-auto relative max-w-[1280px] overflow-hidden">
+        <div className="w-full m-auto relative max-w-[1100px] overflow-hidden">
           <div className="flex justify-between">
             <section
               style={{ translate: `${moveTo}px` }}
@@ -39,19 +39,23 @@ export default function StoriesList() {
           </div>
         </div>
         <div className="flex">
-          <div
-            onClick={handleClickRight}
-            className=" font-bold  text-orange-600  absolute top-[50%] right-[2%] text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
-          >
-            <MdOutlineArrowForwardIos />
-          </div>
+          {moveTo === 0 && (
+            <div
+              onClick={handleClickRight}
+              className=" font-bold  text-orange-600  absolute top-[50%] right-[2%] text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
+            >
+              <MdOutlineArrowForwardIos />
+            </div>
+          )}
 
-          <div
-            onClick={handleClickLeft}
-            className=" font-bold  text-orange-600  absolute top-[50%] left-[2%]  rotate-180 text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
-          >
-            <MdOutlineArrowForwardIos />
-          </div>
+          {moveTo !== 0 && (
+            <div
+              onClick={handleClickLeft}
+              className=" font-bold  text-orange-600  absolute top-[50%] left-[2%]  rotate-180 text-4xl flex  items-center  cursor-pointer hover:scale-110 duration-150"
+            >
+              <MdOutlineArrowForwardIos />
+            </div>
+          )}
         </div>
       </div>
     </>

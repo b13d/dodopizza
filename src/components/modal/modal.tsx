@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Modal, Button, Box, Typography, Backdrop, Fade } from "@mui/material";
+import { Modal, Button, Typography, Backdrop, Fade } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { increment, decrement } from "../../features/counter/counterSlice";
 import {
@@ -9,18 +9,6 @@ import {
   productDelete,
 } from "../../features/products/productsSlice";
 import { IProduct } from "../../../interfaces";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  bgcolor: "#f9f9f9",
-  outline: "none",
-  boxShadow: 24,
-  p: 4,
-  borderRadius: 10,
-};
 
 export default function ModalWindow(props: {
   product: IProduct;
@@ -95,11 +83,13 @@ export default function ModalWindow(props: {
         aria-describedby="modal-modal-description"
       >
         <Fade in={open}>
-          <Box
-            width={props.product.description === undefined ? 400 : 600}
-            sx={style}
+          <div
+            className={`modal w-[70%]`}
+            // width={props.product.description === undefined ? 400 : 600}
           >
-            <section className={`flex gap-7`}>
+            <section
+              className={`flex gap-7 max-sm:flex-col max-sm:items-center`}
+            >
               <div className="w-[70%] flex flex-col items-center">
                 <img
                   className="m-auto"
@@ -147,7 +137,7 @@ export default function ModalWindow(props: {
                 </Button>
               </div>
             </section>
-          </Box>
+          </div>
         </Fade>
       </Modal>
     </>

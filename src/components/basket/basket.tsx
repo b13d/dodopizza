@@ -84,19 +84,14 @@ export default function TemporaryDrawer() {
   };
 
   const list = () => (
-    <Box
-      sx={{
-        width: 400,
-        height: "100vh",
-        position: "relative",
-        backgroundColor: "#ededed",
-      }}
+    <div
+      className="max-w-sm:w-screen h-[100vh] relative bg-[#ededed] min-w-[400px]:w-[400px]"
       // role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       {products.length > 0 && (
-        <section className="overflow-x-hidden h-screen flex flex-col">
+        <section className="overflow-x-hidden h-screen flex flex-col w-full">
           <div className="p-4">
             <Typography
               sx={{ textAlign: "start" }}
@@ -106,7 +101,7 @@ export default function TemporaryDrawer() {
               {count.countProducts} товара на {count.countPrice} ₽
             </Typography>
           </div>
-          <section className="overflow-scroll overflow-x-hidden flex flex-col w-full bg-[#ededed]">
+          <section className="overflow-auto overflow-x-hidden flex flex-col w-full bg-[#ededed]">
             {products.map((product, index) => (
               <div className="px-4 text-black bg-white mb-2 hover:bg-gray-50 duration-200">
                 <div className="flex items-start" key={product.id}>
@@ -209,7 +204,7 @@ export default function TemporaryDrawer() {
           <h1 className="text-black text-3xl">Корзина пуста</h1>
         </div>
       )}
-    </Box>
+    </div>
   );
 
   return (
@@ -223,9 +218,11 @@ export default function TemporaryDrawer() {
             <section className="flex p-0 m-0">
               <div
                 onClick={toggleDrawer(false)}
-                className=" bg-[#000000cc] min-h-screen w-full z-10 fixed left-0 top-0"
+                className="bg-[#000000cc]  min-h-screen w-full z-10 fixed left-0 top-0"
               ></div>
-              <div className="fixed z-20 right-0 top-0">{list()}</div>
+              <div className="max-[400px]:w-full w-[400px] fixed z-20 right-0 top-0">
+                {list()}
+              </div>
             </section>
           )}
         </React.Fragment>
